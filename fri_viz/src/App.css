@@ -1,22 +1,175 @@
-.App {
-  text-align: center;
+.controlPanel {
+  z-index: 1000000;
+  position: fixed;
+  width: 25%;
+  height: 46.5%;
+  left: 73%;
+  top: 3%;
+  bottom: 3%;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.App-logo {
-  height: 40vmin;
+/*Overlay CSS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.controlPanelHeader{
+    margin-top: 3%;
+    margin-left: 7%;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.controlPanelDefinitionExcerpt {
+    margin-top: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
-.App-link {
-  color: #09d3ac;
+.breakLine {
+    margin-top: 4%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
+
+.percentileSlider{
+    margin-top: 3%;
+    margin-left: 7%;
+    justify-content: right;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.overlaySelectors {
+    margin-top: 2.345%;
+    margin-left: 15%;
+    justify-content: center;
+    display: inline-block;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap:0px;
+    grid-row-gap: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    }
+.selectorOne { 
+    grid-area: 1 / 1 / 2 / 2; 
+}
+.selectorSecond { 
+    grid-area: 1 / 2 / 2 / 3; 
+}
+.selectorThree { 
+    grid-area: 2 / 1 / 3 / 2; 
+}
+.selectorFour { 
+    grid-area: 2 / 2 / 3 / 3; 
+}
+
+
+.gradientScale {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 20px;
+    margin-top: 3.5%;
+    margin-left: 7%;
+    margin-right: 7%;
+
+}
+.gr1 { 
+    grid-area: 1 / 1 / 2 / 2;
+    background: rgb(1, 152, 189); 
+}
+.gr2 { 
+    grid-area: 1 / 2 / 2 / 3; 
+    background: rgb(73, 227, 206); 
+}
+.gr3 {
+     grid-area: 1 / 3 / 2 / 4; 
+     background: rgb(216, 254, 181); 
+}
+.gr4 { 
+    grid-area: 1 / 4 / 2 / 5; 
+    background: rgb(254, 237, 177); 
+
+}
+.gr5 { 
+    grid-area: 1 / 5 / 2 / 6; 
+    background: rgb(254, 173, 84); 
+
+}
+.gr6 { 
+    grid-area: 1 / 6 / 2 / 7; 
+    background: rgb(209, 55, 78); 
+  
+}
+
+.gradientMarkers{
+    margin-top: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.gradientMarkerLeft{
+    float: left;
+}
+
+.gradientMarkerRight{
+    float: right;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 30%;
+    height: 2%;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
